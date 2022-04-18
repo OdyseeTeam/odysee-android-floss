@@ -1,0 +1,232 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BackgroundMode\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundMode\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BackgroundModeExt\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundModeExt\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"KeepRunning\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Insomnia\"><param name=\"android-package\" value=\"nl.xservices.plugins.Insomnia\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"MusicControls\"><param name=\"android-package\" value=\"com.homerours.musiccontrols.MusicControls\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"CDVOrientation\"><param name=\"android-package\" value=\"cordova.plugins.screenorientation.CDVOrientation\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"UniversalLinks\"><param name=\"android-package\" value=\"com.nordnetab.cordova.ul.UniversalLinksPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<service android:name=\"de.appplant.cordova.plugin.background.ForegroundService\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"com.homerours.musiccontrols.MusicControlsNotificationKiller\" />",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+              "count": 1
+            }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.FOREGROUND_SERVICE\" />",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-music-controls2": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.odysee.app"
+    },
+    "cordova-plugin-universal-links": {
+      "PACKAGE_NAME": "com.odysee.app"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-background-mode.BackgroundMode",
+      "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+      "pluginId": "cordova-plugin-background-mode",
+      "clobbers": [
+        "cordova.plugins.backgroundMode",
+        "plugin.backgroundMode"
+      ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open"
+      ]
+    },
+    {
+      "id": "cordova-plugin-insomnia.Insomnia",
+      "file": "plugins/cordova-plugin-insomnia/www/Insomnia.js",
+      "pluginId": "cordova-plugin-insomnia",
+      "clobbers": [
+        "window.plugins.insomnia"
+      ]
+    },
+    {
+      "id": "cordova-plugin-music-controls2.MusicControls",
+      "file": "plugins/cordova-plugin-music-controls2/www/MusicControls.js",
+      "pluginId": "cordova-plugin-music-controls2",
+      "clobbers": [
+        "MusicControls"
+      ]
+    },
+    {
+      "id": "es6-promise-plugin.Promise",
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-screen-orientation.screenorientation",
+      "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+      "pluginId": "cordova-plugin-screen-orientation",
+      "clobbers": [
+        "cordova.plugins.screenorientation"
+      ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
+    },
+    {
+      "id": "cordova-plugin-statusbar.statusbar",
+      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+      "pluginId": "cordova-plugin-statusbar",
+      "clobbers": [
+        "window.StatusBar"
+      ]
+    },
+    {
+      "id": "cordova-plugin-universal-links.universalLinks",
+      "file": "plugins/cordova-plugin-universal-links/www/universal_links.js",
+      "pluginId": "cordova-plugin-universal-links",
+      "clobbers": [
+        "universalLinks"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-androidx-adapter": "1.1.3",
+    "cordova-plugin-device": "2.0.3",
+    "cordova-plugin-background-mode": "0.7.3",
+    "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-plugin-insomnia": "4.3.0",
+    "cordova-plugin-music-controls2": "3.0.6",
+    "es6-promise-plugin": "4.2.2",
+    "cordova-plugin-screen-orientation": "3.0.2",
+    "cordova-plugin-splashscreen": "6.0.0",
+    "cordova-plugin-statusbar": "3.0.0",
+    "cordova-plugin-universal-links": "0.3.0"
+  }
+}

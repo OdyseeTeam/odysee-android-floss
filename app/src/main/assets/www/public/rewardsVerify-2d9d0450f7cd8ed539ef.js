@@ -1,0 +1,27 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["rewardsVerify"],{
+
+/***/ "../ui/page/rewardsVerify/index.js":
+/*!*****************************************!*\
+  !*** ../ui/page/rewardsVerify/index.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ \"../node_modules/react-redux/es/index.js\");\n/* harmony import */ var redux_selectors_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux/selectors/user */ \"../ui/redux/selectors/user.js\");\n/* harmony import */ var _view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view */ \"../ui/page/rewardsVerify/view.jsx\");\n\n\n\n\nvar select = function select(state) {\n  return {\n    user: Object(redux_selectors_user__WEBPACK_IMPORTED_MODULE_1__[\"selectUser\"])(state)\n  };\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__[\"connect\"])(select, null)(_view__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi4vdWkvcGFnZS9yZXdhcmRzVmVyaWZ5L2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4uL3VpL3BhZ2UvcmV3YXJkc1ZlcmlmeS9pbmRleC5qcz83ZjNiIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNvbm5lY3QgfSBmcm9tICdyZWFjdC1yZWR1eCc7XG5pbXBvcnQgeyBzZWxlY3RVc2VyIH0gZnJvbSAncmVkdXgvc2VsZWN0b3JzL3VzZXInO1xuaW1wb3J0IFJld2FyZHNWZXJpZnlQYWdlIGZyb20gJy4vdmlldyc7XG5cbmNvbnN0IHNlbGVjdCA9IHN0YXRlID0+ICh7XG4gIHVzZXI6IHNlbGVjdFVzZXIoc3RhdGUpLFxufSk7XG5cbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3Qoc2VsZWN0LCBudWxsKShSZXdhcmRzVmVyaWZ5UGFnZSk7XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQ0E7QUFHQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///../ui/page/rewardsVerify/index.js\n");
+
+/***/ }),
+
+/***/ "../ui/page/rewardsVerify/view.jsx":
+/*!*****************************************!*\
+  !*** ../ui/page/rewardsVerify/view.jsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"../node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var component_userVerify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! component/userVerify */ \"../ui/component/userVerify/index.js\");\n/* harmony import */ var component_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! component/page */ \"../ui/component/page/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ \"../node_modules/react-router-dom/esm/react-router-dom.js\");\n\n\n\n\n\nfunction RewardsVerifyPage(props) {\n  var user = props.user;\n\n  var _useHistory = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"useHistory\"])(),\n      goBack = _useHistory.goBack;\n\n  var rewardsApproved = user && user.is_reward_approved;\n  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(function () {\n    if (rewardsApproved) {\n      goBack();\n    }\n  }, [rewardsApproved]);\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(component_page__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(component_userVerify__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    onSkip: function onSkip() {\n      return goBack();\n    }\n  }));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (RewardsVerifyPage);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi4vdWkvcGFnZS9yZXdhcmRzVmVyaWZ5L3ZpZXcuanN4LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4uL3VpL3BhZ2UvcmV3YXJkc1ZlcmlmeS92aWV3LmpzeD9lOTdhIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEBmbG93XG5pbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFVzZXJWZXJpZnkgZnJvbSAnY29tcG9uZW50L3VzZXJWZXJpZnknO1xuaW1wb3J0IFBhZ2UgZnJvbSAnY29tcG9uZW50L3BhZ2UnO1xuaW1wb3J0IHsgdXNlSGlzdG9yeSB9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nO1xuXG50eXBlIFByb3BzID0ge1xuICB1c2VyOiA/VXNlcixcbn07XG5cbmZ1bmN0aW9uIFJld2FyZHNWZXJpZnlQYWdlKHByb3BzOiBQcm9wcykge1xuICBjb25zdCB7IHVzZXIgfSA9IHByb3BzO1xuICBjb25zdCB7IGdvQmFjayB9ID0gdXNlSGlzdG9yeSgpO1xuICBjb25zdCByZXdhcmRzQXBwcm92ZWQgPSB1c2VyICYmIHVzZXIuaXNfcmV3YXJkX2FwcHJvdmVkO1xuXG4gIFJlYWN0LnVzZUVmZmVjdCgoKSA9PiB7XG4gICAgaWYgKHJld2FyZHNBcHByb3ZlZCkge1xuICAgICAgZ29CYWNrKCk7XG4gICAgfVxuICB9LCBbcmV3YXJkc0FwcHJvdmVkXSk7XG5cbiAgcmV0dXJuIChcbiAgICA8UGFnZT5cbiAgICAgIDxVc2VyVmVyaWZ5IG9uU2tpcD17KCkgPT4gZ29CYWNrKCl9IC8+XG4gICAgPC9QYWdlPlxuICApO1xufVxuXG5leHBvcnQgZGVmYXVsdCBSZXdhcmRzVmVyaWZ5UGFnZTtcbiJdLCJtYXBwaW5ncyI6IkFBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUtBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFDQTtBQUVBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFIQTtBQU1BO0FBRUE7QUFBQTtBQUFBO0FBQUE7QUFHQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///../ui/page/rewardsVerify/view.jsx\n");
+
+/***/ })
+
+}]);
