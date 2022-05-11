@@ -60,7 +60,7 @@ function onDeviceReady() {
 
     window.addEventListener("orientationchange", function(e){
         console.log('orientationchange: ', screen.orientation.type)
-        console.log('bb: ', window.screen)
+        // console.log('bb: ', window.screen)
         if(!document.getElementsByClassName("content__viewer")[0].classList.contains('content__viewer--floating')){
             if(screen.orientation.type.indexOf('portrait') == -1){
                 console.log('A')                
@@ -306,4 +306,25 @@ function cutUrl(url){
 
 function updateProgress(progress){
     console.log('CDV Progress: ', progres)
+}
+
+
+
+var x = 0
+var observer = undefined
+function onClassChange(element) {
+    observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if( 
+            mutation.type === 'attributes' &&
+            mutation.attributeName === 'class' &&
+            !mutation.target.classList.contains('content__viewer_fullscreen')
+        ){
+            mutation.target.classList.add('content__viewer_fullscreen')
+            // mutation.target.setAttribute('style', 'height: 100% !important')
+        }
+      })
+    })
+    observer.observe(element, { attributes: true })
+    return observer.disconnect
 }
