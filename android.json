@@ -101,37 +101,37 @@
   },
   "installed_plugins": {
     "cordova-plugin-androidx-adapter": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-background-mode": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-insomnia": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-music-controls2": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "es6-promise-plugin": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-screen-orientation": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     },
     "cordova-plugin-universal-links": {
-      "PACKAGE_NAME": "com.odysee.app"
+      "PACKAGE_NAME": "com.odysee.floss"
     }
   },
   "dependent_plugins": {},

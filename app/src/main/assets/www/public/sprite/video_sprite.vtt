@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=0,0,140,79
+
+00:00:02.000 --> 00:00:04.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=140,0,140,79
+
+00:00:04.000 --> 00:00:06.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=280,0,140,79
+
+00:00:06.000 --> 00:00:08.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=420,0,140,79
+
+00:00:08.000 --> 00:00:10.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=560,0,140,79
+
+00:00:10.000 --> 00:00:12.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=700,0,140,79
+
+00:00:12.000 --> 00:00:14.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=840,0,140,79
+
+00:00:14.000 --> 00:00:16.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=980,0,140,79
+
+00:00:16.000 --> 00:00:18.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=1120,0,140,79
+
+00:00:18.000 --> 00:00:20.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=0,79,140,79
+
+00:00:20.000 --> 00:00:22.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=140,79,140,79
+
+00:00:22.000 --> 00:00:24.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=280,79,140,79
+
+00:00:24.000 --> 00:00:26.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=420,79,140,79
+
+00:00:26.000 --> 00:00:28.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=560,79,140,79
+
+00:00:28.000 --> 00:00:30.000
+http://localhost:9090/public/sprite/video-1.webp#xywh=700,79,140,79
