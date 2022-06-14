@@ -56,6 +56,11 @@ function onDeviceReady() {
             history: undefined
         },
         browser: undefined,
+        build: {
+            dev: false,
+            googlePlay: false,
+            apkUpdater: false
+        }
     }
 
     window.addEventListener("orientationchange", function(e){
