@@ -39,7 +39,6 @@ var lockControls = false
 var rotateFullscreen = false
 
 document.addEventListener('deviceready', onDeviceReady, false)
-window.addEventListener('beforeunload', () => { MusicControls.destroy(onControlsDestroySuccess, onError) })
 
 function onDeviceReady() {
     document.getElementById('deviceready').classList.add('ready') 
@@ -127,6 +126,8 @@ function onDeviceReady() {
      window.addEventListener("popstate", function(e) {
         console.log('Forward? ', e)
     })
+    window.addEventListener('beforeunload', () => { MusicControls.destroy(onControlsDestroySuccess, onError) })
+
 
     init()
 }
@@ -163,14 +164,29 @@ function initBackground(){
     })
 }
 
+function seekbackward(){
+    if(!_media){
+        if(window.player) window.player.currentTime(Math.max(0, window.player.currentTime() - 10));
+    };
+}      
+
+function seekforward(){
+    if(!_media){
+        if(window.player) window.player.currentTime(Math.max(0, window.player.currentTime() + 10));        
+    };  
+} 
+
+
 function initMediaControls(){
     function events(action) {
 
         const message = JSON.parse(action).message
         switch(message) {
             case 'music-controls-next':
+                seekforward()
                 break
             case 'music-controls-previous':
+                seekbackward()
                 break
             case 'music-controls-pause':
                 tapPause()
@@ -238,8 +254,9 @@ function setControls(title, channel, thumbnail){
             isPlaying   : true,
             dismissable : true,
     
-            hasPrev   : false,
-            hasNext   : false,
+            hasPrev   : true,
+            hasNext   : true,
+
             hasClose  : false,
             notificationIcon: 'notification_icon'
     
