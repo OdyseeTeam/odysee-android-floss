@@ -54,6 +54,10 @@ function onDeviceReady() {
             killControls: killControls,            
             history: undefined
         },
+        chromecast: {
+            setMediaPayload: setMediaPayload,
+            killSession: killSession
+        },
         browser: undefined,
         build: {
             dev: false,
@@ -349,4 +353,15 @@ function onClassChange(element) {
     })
     observer.observe(element, { attributes: true })
     return observer.disconnect
+}
+
+var mediaPayload = undefined
+function setMediaPayload(payload){    
+    console.log('Set mediaPayload: ', payload)
+    mediaPayload = payload
+    window.player.allowFullscreen = false;
+}
+
+function killSession(){
+    // if(_session) _session.stop()
 }
