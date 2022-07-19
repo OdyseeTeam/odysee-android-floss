@@ -31,3 +31,7 @@ Odysee is a fun, friendly, and safe video sharing platform that loves memes and 
 Creators are encouraged to sign up through odysee.com in order to sync their existing channel's library. Currently the Odysee app does not support creator sign up.
 
 For support, please visit the Odysee Help Hub: https://odysee.com/@OdyseeHelp
+
+Anti-Features:
+* NonFreeNet - uses a non-free network service which is impossible, or not easy to replace without rebuilding the app
+* Tracking - the app tracks user activity, more info here: https://odysee.com/%24/privacypolicy
