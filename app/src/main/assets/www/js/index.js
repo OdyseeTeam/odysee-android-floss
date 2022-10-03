@@ -36,6 +36,7 @@
 
 var payload = undefined
 var lockControls = false
+var lockOrientation = false
 var rotateFullscreen = false
 
 document.addEventListener('deviceready', onDeviceReady, false)
@@ -51,14 +52,20 @@ function onDeviceReady() {
             checkPayload: checkPayload,
             initBrowser: initBrowser,
             updateProgress: updateProgress,
-            killControls: killControls,            
+            killControls: killControls,           
+            requestFullscreen: requestFullscreen,
+            exitFullscreen: exitFullscreen, 
             history: undefined
         },
+        settings: {
+            appNotification: undefined
+        },
+        browser: undefined,
+        fullscreen: false,
         chromecast: {
             setMediaPayload: setMediaPayload,
             killSession: killSession
-        },
-        browser: undefined,
+        },        
         build: {
             dev: false,
             googlePlay: false,
@@ -68,41 +75,7 @@ function onDeviceReady() {
 
     window.addEventListener("orientationchange", function(e){
         console.log('orientationchange: ', screen.orientation.type)
-        // console.log('bb: ', window.screen)
-        if(!document.getElementsByClassName("content__viewer")[0].classList.contains('content__viewer--floating')){
-            if(screen.orientation.type.indexOf('portrait') == -1){
-                console.log('A')                
-                onClassChange(document.getElementsByClassName("content__viewer")[0])
-                document.getElementsByClassName('file-render')[0].classList.add('file-render_fullscreen')
-                document.getElementsByClassName('vjs-tech')[0].classList.add('vjs-tech_fullscreen')
-                document.getElementsByClassName('vjs-touch-overlay')[0].classList.add('vjs-touch-overlay_fullscreen')
-                document.getElementsByClassName("content__viewer")[0].classList.add('content__viewer_fullscreen')
-                
-                document.getElementsByClassName('header')[0].classList.add('header_hidden')        
-                StatusBar.hide()
-            }else{
-                console.log('B')
-                observer.disconnect()
-                document.getElementsByClassName('content__viewer')[0].classList.remove('content__viewer_fullscreen')
-                document.getElementsByClassName('file-render')[0].classList.remove('file-render_fullscreen')
-                document.getElementsByClassName('vjs-tech')[0].classList.remove('vjs-tech_fullscreen')
-                document.getElementsByClassName('vjs-touch-overlay')[0].classList.remove('vjs-touch-overlay_fullscreen')
-                document.getElementsByClassName('header')[0].classList.remove('header_hidden')        
-                document.getElementsByClassName('content__viewer')[0].style.top = 'var(--header-height-mobile)'
-                StatusBar.show()
-            }
-        }      
-
-        if(screen.orientation.type.indexOf('portrait') == -1){
-            console.log('landscape')
-            if(window.screen.width>window.screen.height && lockOrientation){
-                lockOrientation = false
-                // screen.orientation.unlock();
-                console.log('unlock')
-            }
-        }else{
-            console.log('portrait')
-        }        
+        onOrientationChange()
     })
 
     document.addEventListener("fullscreenchange", function(e) {
@@ -142,6 +115,43 @@ function init(){
     initMediaControls()    
     document.addEventListener("resume", focus, false)
     document.addEventListener("pause", unfocus, false)
+}
+
+function onOrientationChange(){
+    if(!document.getElementsByClassName("content__viewer")[0].classList.contains('content__viewer--floating')){
+        if(screen.orientation.type.indexOf('portrait') == -1){
+            console.log('A')                
+            onClassChange(document.getElementsByClassName("content__viewer")[0])
+            document.getElementsByClassName('file-render')[0].classList.add('file-render_fullscreen')
+            document.getElementsByClassName('vjs-tech')[0].classList.add('vjs-tech_fullscreen')
+            document.getElementsByClassName('vjs-touch-overlay')[0].classList.add('vjs-touch-overlay_fullscreen')
+            document.getElementsByClassName("content__viewer")[0].classList.add('content__viewer_fullscreen')
+            
+            document.getElementsByClassName('header')[0].classList.add('header_hidden')        
+            StatusBar.hide()
+        }else{
+            console.log('B')
+            if(observer) observer.disconnect()
+            document.getElementsByClassName('content__viewer')[0].classList.remove('content__viewer_fullscreen')
+            document.getElementsByClassName('file-render')[0].classList.remove('file-render_fullscreen')
+            document.getElementsByClassName('vjs-tech')[0].classList.remove('vjs-tech_fullscreen')
+            document.getElementsByClassName('vjs-touch-overlay')[0].classList.remove('vjs-touch-overlay_fullscreen')
+            document.getElementsByClassName('header')[0].classList.remove('header_hidden')        
+            document.getElementsByClassName('content__viewer')[0].style.top = 'var(--header-height-mobile)'
+            StatusBar.show()
+        }
+    }      
+
+    if(screen.orientation.type.indexOf('portrait') == -1){
+        console.log('landscape')
+        if(window.screen.width>window.screen.height && lockOrientation){
+            lockOrientation = false
+            // screen.orientation.unlock();
+            console.log('unlock')
+        }
+    }else{
+        console.log('portrait')
+    }  
 }
 
 function initUniversalLinks(){
@@ -222,6 +232,7 @@ function initMediaControls(){
 
 function onPlay(claim, channelName, thumbnail){    
     window.plugins.insomnia.keepAwake()
+    onOrientationChange()
     if(!cordova.plugins.backgroundMode.isActive()){
         cordova.plugins.backgroundMode.enable()
     }        
@@ -346,8 +357,9 @@ function onClassChange(element) {
             mutation.attributeName === 'class' &&
             !mutation.target.classList.contains('content__viewer_fullscreen')
         ){
-            mutation.target.classList.add('content__viewer_fullscreen')
-            // mutation.target.setAttribute('style', 'height: 100% !important')
+            if(screen.orientation.type.indexOf('portrait') == -1){
+                mutation.target.classList.add('content__viewer_fullscreen')
+            }            
         }
       })
     })
@@ -365,3 +377,13 @@ function setMediaPayload(payload){
 function killSession(){
     // if(_session) _session.stop()
 }
+
+function requestFullscreen(){
+    window.odysee.fullscreen = true
+}
+
+function exitFullscreen(){
+    window.odysee.fullscreen = false
+    console.log('exitFullscreen')
+}
+
