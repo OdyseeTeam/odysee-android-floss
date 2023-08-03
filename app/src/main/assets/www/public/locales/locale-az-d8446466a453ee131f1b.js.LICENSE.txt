@@ -1,0 +1,5 @@
+//! author : topchiyev : https://github.com/topchiyev
+
+//! locale : Azerbaijani [az]
+
+//! moment.js locale configuration

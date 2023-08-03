@@ -1,0 +1,5 @@
+//! author : André Silva : https://github.com/askpt
+
+//! locale : Irish or Irish Gaelic [ga]
+
+//! moment.js locale configuration

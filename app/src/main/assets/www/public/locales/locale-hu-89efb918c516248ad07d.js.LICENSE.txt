@@ -1,0 +1,7 @@
+//! author : Adam Brunner : https://github.com/adambrunner
+
+//! author : Peter Viszt  : https://github.com/passatgt
+
+//! locale : Hungarian [hu]
+
+//! moment.js locale configuration

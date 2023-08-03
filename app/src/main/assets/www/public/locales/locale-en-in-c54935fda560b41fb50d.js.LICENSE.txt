@@ -1,0 +1,5 @@
+//! author : Jatin Agrawal : https://github.com/jatinag22
+
+//! locale : English (India) [en-in]
+
+//! moment.js locale configuration

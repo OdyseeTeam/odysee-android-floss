@@ -1,0 +1,5 @@
+//! author : John Fischer : https://github.com/jfroffice
+
+//! locale : French [fr]
+
+//! moment.js locale configuration

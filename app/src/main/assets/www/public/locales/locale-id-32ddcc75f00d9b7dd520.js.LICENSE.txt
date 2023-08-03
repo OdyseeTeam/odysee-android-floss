@@ -1,0 +1,7 @@
+//! author : Mohammad Satrio Utomo : https://github.com/tyok
+
+//! locale : Indonesian [id]
+
+//! moment.js locale configuration
+
+//! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan

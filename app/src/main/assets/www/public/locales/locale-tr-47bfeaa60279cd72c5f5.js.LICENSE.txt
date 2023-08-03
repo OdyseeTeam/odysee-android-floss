@@ -1,0 +1,7 @@
+//!           Burak Yiğit Kaya: https://github.com/BYK
+
+//! authors : Erhan Gundogan : https://github.com/erhangundogan,
+
+//! locale : Turkish [tr]
+
+//! moment.js locale configuration

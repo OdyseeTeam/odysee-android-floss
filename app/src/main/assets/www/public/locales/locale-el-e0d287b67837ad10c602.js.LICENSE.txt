@@ -1,0 +1,5 @@
+//! author : Aggelos Karalias : https://github.com/mehiel
+
+//! locale : Greek [el]
+
+//! moment.js locale configuration

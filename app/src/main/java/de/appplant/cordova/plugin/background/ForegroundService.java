@@ -123,22 +123,20 @@ public class ForegroundService extends Service {
      * by the OS.
      */
     @SuppressLint("WakelockTimeout")
-    private void keepAwake() {
+    private void keepAwake()
+    {
         JSONObject settings = BackgroundMode.getSettings();
         boolean isSilent    = settings.optBoolean("silent", false);
+
         if (!isSilent) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                nm.createNotificationChannel(new NotificationChannel("de.appplant.cordova.plugin.background", "App Service", NotificationManager.IMPORTANCE_DEFAULT));
-                nm.createNotificationChannel(new NotificationChannel("com.package.download_info", "Download Info", NotificationManager.IMPORTANCE_DEFAULT));
-            } else {
-                startForeground(NOTIFICATION_ID, makeNotification());
-            }
+            startForeground(NOTIFICATION_ID, makeNotification());
         }
 
-        PowerManager powerMgr = (PowerManager)
-        getSystemService(POWER_SERVICE);
-        wakeLock = powerMgr.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "BackgroundMode");
+        PowerManager pm = (PowerManager)getSystemService(POWER_SERVICE);
+
+        wakeLock = pm.newWakeLock(
+                PARTIAL_WAKE_LOCK, "backgroundmode:wakelock");
+
         wakeLock.acquire();
     }
 
@@ -224,7 +222,7 @@ public class ForegroundService extends Service {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             PendingIntent contentIntent = PendingIntent.getActivity(
                     context, NOTIFICATION_ID, intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT);
+                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 
             notification.setContentIntent(contentIntent);

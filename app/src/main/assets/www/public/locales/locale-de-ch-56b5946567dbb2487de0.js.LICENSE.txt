@@ -1,0 +1,5 @@
+//! author : sschueller : https://github.com/sschueller
+
+//! locale : German (Switzerland) [de-ch]
+
+//! moment.js locale configuration

@@ -1,0 +1,5 @@
+//! author : Dominika Kruk : https://github.com/amaranthrose
+
+//! locale : Klingon [tlh]
+
+//! moment.js locale configuration

@@ -1,0 +1,5 @@
+//! author : Ebrahim Byagowi : https://github.com/ebraminio
+
+//! locale : Persian [fa]
+
+//! moment.js locale configuration

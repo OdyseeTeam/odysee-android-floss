@@ -1,0 +1,5 @@
+//! author : Gaspard Bucher : https://github.com/gaspard
+
+//! locale : French (Switzerland) [fr-ch]
+
+//! moment.js locale configuration

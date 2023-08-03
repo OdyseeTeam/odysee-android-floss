@@ -1,0 +1,5 @@
+//! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
+
+//! locale : Punjabi (India) [pa-in]
+
+//! moment.js locale configuration

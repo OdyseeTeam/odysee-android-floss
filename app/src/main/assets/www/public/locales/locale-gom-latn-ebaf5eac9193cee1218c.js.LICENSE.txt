@@ -1,0 +1,5 @@
+//! author : The Discoverer : https://github.com/WikiDiscoverer
+
+//! locale : Konkani Latin script [gom-latn]
+
+//! moment.js locale configuration

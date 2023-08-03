@@ -1,0 +1,5 @@
+//! author : Krishna Chaitanya Thota : https://github.com/kcthota
+
+//! locale : Telugu [te]
+
+//! moment.js locale configuration

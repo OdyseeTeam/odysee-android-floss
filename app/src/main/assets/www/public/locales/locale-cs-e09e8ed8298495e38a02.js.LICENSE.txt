@@ -1,0 +1,5 @@
+//! author : petrbela : https://github.com/petrbela
+
+//! locale : Czech [cs]
+
+//! moment.js locale configuration

@@ -1,0 +1,5 @@
+//! author : Werner Mollentze : https://github.com/wernerm
+
+//! locale : Afrikaans [af]
+
+//! moment.js locale configuration

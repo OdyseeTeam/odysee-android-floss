@@ -1,0 +1,9 @@
+//! author : Lorenzo : https://github.com/aliem
+
+//! author: Marco : https://github.com/Manfre98
+
+//! author: Mattia Larentis: https://github.com/nostalgiaz
+
+//! locale : Italian [it]
+
+//! moment.js locale configuration

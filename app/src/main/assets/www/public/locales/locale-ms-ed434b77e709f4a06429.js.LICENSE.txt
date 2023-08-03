@@ -1,0 +1,5 @@
+//! author : Weldan Jamili : https://github.com/weldan
+
+//! locale : Malay [ms]
+
+//! moment.js locale configuration

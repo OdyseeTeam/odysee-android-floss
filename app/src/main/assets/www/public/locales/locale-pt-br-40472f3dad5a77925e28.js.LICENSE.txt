@@ -1,0 +1,5 @@
+//! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
+
+//! locale : Portuguese (Brazil) [pt-br]
+
+//! moment.js locale configuration

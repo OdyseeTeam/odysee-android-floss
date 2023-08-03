@@ -1,0 +1,7 @@
+//! author : Martin Minka : https://github.com/k2s
+
+//! based on work of petrbela : https://github.com/petrbela
+
+//! locale : Slovak [sk]
+
+//! moment.js locale configuration

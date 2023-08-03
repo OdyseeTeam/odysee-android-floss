@@ -1,0 +1,13 @@
+//! author : Abdel Said: https://github.com/abdelsaid
+
+//! author : Ahmed Elkhatib
+
+//! author : Amine Roukh: https://github.com/Amine27
+
+//! author : Noureddine LOUAHEDJ : https://github.com/noureddinem
+
+//! author : forabi https://github.com/forabi
+
+//! locale : Arabic (Algeria) [ar-dz]
+
+//! moment.js locale configuration

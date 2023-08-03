@@ -1,0 +1,5 @@
+//! author : Kaushik Thanki : https://github.com/Kaushik1987
+
+//! locale : Gujarati [gu]
+
+//! moment.js locale configuration

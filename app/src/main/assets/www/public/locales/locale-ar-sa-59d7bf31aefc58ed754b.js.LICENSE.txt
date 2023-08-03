@@ -1,0 +1,5 @@
+//! author : Suhail Alkowaileet : https://github.com/xsoh
+
+//! locale : Arabic (Saudi Arabia) [ar-sa]
+
+//! moment.js locale configuration
