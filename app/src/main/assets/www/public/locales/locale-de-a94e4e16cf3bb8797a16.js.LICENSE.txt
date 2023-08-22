@@ -1,0 +1,9 @@
+//! author : Mikolaj Dadela : https://github.com/mik01aj
+
+//! author : lluchs : https://github.com/lluchs
+
+//! author: Menelion Elensúle: https://github.com/Oire
+
+//! locale : German [de]
+
+//! moment.js locale configuration

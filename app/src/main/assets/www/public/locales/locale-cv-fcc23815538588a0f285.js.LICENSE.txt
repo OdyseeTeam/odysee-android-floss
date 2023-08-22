@@ -1,0 +1,5 @@
+//! author : Anatoly Mironov : https://github.com/mirontoli
+
+//! locale : Chuvash [cv]
+
+//! moment.js locale configuration

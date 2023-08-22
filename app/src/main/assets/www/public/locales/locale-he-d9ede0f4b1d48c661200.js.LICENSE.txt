@@ -1,0 +1,9 @@
+//! author : Moshe Simantov : https://github.com/DevelopmentIL
+
+//! author : Tal Ater : https://github.com/TalAter
+
+//! author : Tomer Cohen : https://github.com/tomer
+
+//! locale : Hebrew [he]
+
+//! moment.js locale configuration

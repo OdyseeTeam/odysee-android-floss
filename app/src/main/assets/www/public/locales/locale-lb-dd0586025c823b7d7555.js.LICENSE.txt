@@ -1,0 +1,7 @@
+//! author : David Raison : https://github.com/kwisatz
+
+//! author : mweimerskirch : https://github.com/mweimerskirch
+
+//! locale : Luxembourgish [lb]
+
+//! moment.js locale configuration

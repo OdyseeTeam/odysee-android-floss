@@ -1,0 +1,9 @@
+//! author : Menelion Elensúle : https://github.com/Oire
+
+//! author : Viktorminator : https://github.com/Viktorminator
+
+//! author : Коренберг Марк : https://github.com/socketpair
+
+//! locale : Russian [ru]
+
+//! moment.js locale configuration

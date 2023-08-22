@@ -1,0 +1,5 @@
+//! author : Nusret Parlak: https://github.com/nusretparlak
+
+//! locale : Arabic (Kuwait) [ar-kw]
+
+//! moment.js locale configuration

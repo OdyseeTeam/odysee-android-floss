@@ -1,0 +1,7 @@
+//! author : Ben : https://github.com/ben-lin
+
+//! author : Chris Lam : https://github.com/hehachris
+
+//! locale : Chinese (Taiwan) [zh-tw]
+
+//! moment.js locale configuration

@@ -1,0 +1,3 @@
+.livestream-scheduled{align-items:center;bottom:var(--spacing-m);color:var(--color-white);display:flex;position:absolute}[dir] .livestream-scheduled{background-color:var(--color-black);border-radius:var(--border-radius);padding:var(--spacing-m)}[dir=ltr] .livestream-scheduled{left:var(--spacing-m)}[dir=rtl] .livestream-scheduled{right:var(--spacing-m)}.livestream-scheduled__time{line-height:1}[dir=ltr] .livestream-scheduled__time{padding-left:var(--spacing-m)}[dir=rtl] .livestream-scheduled__time{padding-right:var(--spacing-m)}.livestream-scheduled__date{font-size:var(--font-xsmall)}
+
+/*# sourceMappingURL=livestreamScheduledInfo.c964b1429ff95b876e25.css.map*/

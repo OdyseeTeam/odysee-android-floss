@@ -1,0 +1,9 @@
+//! Author : Menelion Elensúle : https://github.com/Oire
+
+//! author : Dmitry Demidov : https://github.com/demidov91
+
+//! author: Praleska: http://praleska.pro/
+
+//! locale : Belarusian [be]
+
+//! moment.js locale configuration

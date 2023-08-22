@@ -1,0 +1,5 @@
+//! author : Armendarabyan : https://github.com/armendarabyan
+
+//! locale : Armenian [hy-am]
+
+//! moment.js locale configuration

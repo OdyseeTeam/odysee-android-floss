@@ -1,0 +1,5 @@
+//! author : JC Franco : https://github.com/jcfranco
+
+//! locale : Spanish (Mexico) [es-mx]
+
+//! moment.js locale configuration

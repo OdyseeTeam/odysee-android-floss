@@ -1,0 +1,7 @@
+//! author : Jeeeyul Lee <jeeeyul@gmail.com>
+
+//! author : Kyungwook, Park : https://github.com/kyungw00k
+
+//! locale : Korean [ko]
+
+//! moment.js locale configuration

@@ -1,0 +1,7 @@
+//! author : Kristian Sakarisson : https://github.com/sakarisson
+
+//! author : Ragnar Johannesen : https://github.com/ragnar123
+
+//! locale : Faroese [fo]
+
+//! moment.js locale configuration

@@ -1,0 +1,5 @@
+//! author : Irakli Janiashvili : https://github.com/IrakliJani
+
+//! locale : Georgian [ka]
+
+//! moment.js locale configuration
