@@ -1,0 +1,5 @@
+//! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
+
+//! locale : Kazakh [kk]
+
+//! moment.js locale configuration

@@ -1,0 +1,9 @@
+//! author : David Rossellat : https://github.com/gholadr
+
+//! author : Squar team, mysquar.com
+
+//! author : Tin Aung Lin : https://github.com/thanyawzinmin
+
+//! locale : Burmese [my]
+
+//! moment.js locale configuration

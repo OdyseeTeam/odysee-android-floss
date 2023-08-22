@@ -1,0 +1,7 @@
+//!           Stephen Ramthun : https://github.com/stephenramthun
+
+//! authors : https://github.com/mechuwind
+
+//! locale : Nynorsk [nn]
+
+//! moment.js locale configuration

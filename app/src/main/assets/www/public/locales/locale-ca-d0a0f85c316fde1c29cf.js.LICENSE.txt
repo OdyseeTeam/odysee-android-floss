@@ -1,0 +1,5 @@
+//! author : Juan G. Hurtado : https://github.com/juanghurtado
+
+//! locale : Catalan [ca]
+
+//! moment.js locale configuration

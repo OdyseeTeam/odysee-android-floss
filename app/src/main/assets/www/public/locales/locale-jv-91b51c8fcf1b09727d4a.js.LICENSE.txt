@@ -1,0 +1,7 @@
+//! author : Rony Lantip : https://github.com/lantip
+
+//! locale : Javanese [jv]
+
+//! moment.js locale configuration
+
+//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa

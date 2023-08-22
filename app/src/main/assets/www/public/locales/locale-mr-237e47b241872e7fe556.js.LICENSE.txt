@@ -1,0 +1,7 @@
+//! author : Harshad Kale : https://github.com/kalehv
+
+//! author : Vivek Athalye : https://github.com/vnathalye
+
+//! locale : Marathi [mr]
+
+//! moment.js locale configuration

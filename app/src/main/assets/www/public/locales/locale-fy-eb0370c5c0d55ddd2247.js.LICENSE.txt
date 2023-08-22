@@ -1,0 +1,5 @@
+//! author : Robin van der Vliet : https://github.com/robin0van0der0v
+
+//! locale : Frisian [fy]
+
+//! moment.js locale configuration

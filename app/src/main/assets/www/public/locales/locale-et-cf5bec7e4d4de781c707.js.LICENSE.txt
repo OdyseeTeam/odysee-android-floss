@@ -1,0 +1,7 @@
+//! author : Henry Kehlmann : https://github.com/madhenry
+
+//! improvements : Illimar Tambek : https://github.com/ragulka
+
+//! locale : Estonian [et]
+
+//! moment.js locale configuration

@@ -1,0 +1,5 @@
+//! author : The Discoverer : https://github.com/WikiDiscoverer
+
+//! locale : Konkani Devanagari script [gom-deva]
+
+//! moment.js locale configuration

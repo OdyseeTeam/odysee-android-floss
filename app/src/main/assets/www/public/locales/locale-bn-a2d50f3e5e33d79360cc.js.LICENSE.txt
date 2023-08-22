@@ -1,0 +1,5 @@
+//! author : Kaushik Gandhi : https://github.com/kaushikgandhi
+
+//! locale : Bengali [bn]
+
+//! moment.js locale configuration

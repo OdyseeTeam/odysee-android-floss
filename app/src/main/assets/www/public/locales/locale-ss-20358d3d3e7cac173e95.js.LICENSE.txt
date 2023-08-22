@@ -1,0 +1,5 @@
+//! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
+
+//! locale : siSwati [ss]
+
+//! moment.js locale configuration

@@ -17,6 +17,8 @@ import android.support.v4.media.MediaMetadataCompat;
 import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
 
+import android.media.session.MediaSession.Token;
+
 import android.util.Log;
 import android.app.Activity;
 import android.content.Context;
@@ -48,11 +50,11 @@ public class MusicControls extends CordovaPlugin {
 	private AudioManager mAudioManager;
 	private PendingIntent mediaButtonPendingIntent;
 	private boolean mediaButtonAccess=true;
+	private android.media.session.MediaSession.Token token;
 
   	private Activity cordovaActivity;
 
 	private MediaSessionCallback mMediaSessionCallback = new MediaSessionCallback();
-
 
 	private void registerBroadcaster(MusicControlsBroadcastReceiver mMessageReceiver){
 		final Context context = this.cordova.getActivity().getApplicationContext();
@@ -65,6 +67,9 @@ public class MusicControls extends CordovaPlugin {
 
 		// Listen for headset plug/unplug
 		context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
+		
+		// Listen for bluetooth connection state changes
+		context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(android.bluetooth.BluetoothHeadset.ACTION_CONNECTION_STATE_CHANGED));
 	}
 
 	// Register pendingIntent for broacast
@@ -98,7 +103,34 @@ public class MusicControls extends CordovaPlugin {
 		final MusicControlsServiceConnection mConnection = new MusicControlsServiceConnection(activity);
 
 		this.cordovaActivity = activity;
-		this.notification = new MusicControlsNotification(this.cordovaActivity, this.notificationID) {
+/* 		this.notification = new MusicControlsNotification(this.cordovaActivity, this.notificationID) {
+			@Override
+			protected void onNotificationUpdated(Notification notification) {
+				mConnection.setNotification(notification, this.infos.isPlaying);
+			}
+
+			@Override
+			protected void onNotificationDestroyed() {
+				mConnection.setNotification(null, false);
+			}
+		}; */
+
+		this.mMessageReceiver = new MusicControlsBroadcastReceiver(this);
+		this.registerBroadcaster(mMessageReceiver);
+
+		
+		this.mediaSessionCompat = new MediaSessionCompat(context, "cordova-music-controls-media-session", null, this.mediaButtonPendingIntent);
+		this.mediaSessionCompat.setFlags(MediaSessionCompat.FLAG_HANDLES_MEDIA_BUTTONS | MediaSessionCompat.FLAG_HANDLES_TRANSPORT_CONTROLS);
+
+		MediaSessionCompat.Token _token = this.mediaSessionCompat.getSessionToken();
+		this.token = (android.media.session.MediaSession.Token) _token.getToken();
+
+		setMediaPlaybackState(PlaybackStateCompat.STATE_PAUSED);
+		this.mediaSessionCompat.setActive(true);
+
+		this.mediaSessionCompat.setCallback(this.mMediaSessionCallback);
+
+		this.notification = new MusicControlsNotification(this.cordovaActivity, this.notificationID, this.token) {
 			@Override
 			protected void onNotificationUpdated(Notification notification) {
 				mConnection.setNotification(notification, this.infos.isPlaying);
@@ -109,25 +141,15 @@ public class MusicControls extends CordovaPlugin {
 				mConnection.setNotification(null, false);
 			}
 		};
-
-		this.mMessageReceiver = new MusicControlsBroadcastReceiver(this);
-		this.registerBroadcaster(mMessageReceiver);
-
-		
-		this.mediaSessionCompat = new MediaSessionCompat(context, "cordova-music-controls-media-session", null, this.mediaButtonPendingIntent);
-		this.mediaSessionCompat.setFlags(MediaSessionCompat.FLAG_HANDLES_MEDIA_BUTTONS | MediaSessionCompat.FLAG_HANDLES_TRANSPORT_CONTROLS);
-
-
-		setMediaPlaybackState(PlaybackStateCompat.STATE_PAUSED);
-		this.mediaSessionCompat.setActive(true);
-
-		this.mediaSessionCompat.setCallback(this.mMediaSessionCallback);
 		
 		// Register media (headset) button event receiver
 		try {
 			this.mAudioManager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
 			Intent headsetIntent = new Intent("music-controls-media-button");
-			this.mediaButtonPendingIntent = PendingIntent.getBroadcast(context, 0, headsetIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+			this.mediaButtonPendingIntent = PendingIntent.getBroadcast(
+				context, 0, headsetIntent,
+				Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE : PendingIntent.FLAG_UPDATE_CURRENT
+			);
 			this.registerMediaButtonEvent();
 		} catch (Exception e) {
 			this.mediaButtonAccess=false;
@@ -152,30 +174,35 @@ public class MusicControls extends CordovaPlugin {
 
 			this.cordova.getThreadPool().execute(new Runnable() {
 				public void run() {
-					notification.updateNotification(infos);
+					try {
+						notification.updateNotification(infos);
 					
-					// track title
-					metadataBuilder.putString(MediaMetadataCompat.METADATA_KEY_TITLE, infos.track);
-					// artists
-					metadataBuilder.putString(MediaMetadataCompat.METADATA_KEY_ARTIST, infos.artist);
-					//album
-					metadataBuilder.putString(MediaMetadataCompat.METADATA_KEY_ALBUM, infos.album);
+						// track title
+						metadataBuilder.putString(MediaMetadataCompat.METADATA_KEY_TITLE, infos.track);
+						// artists
+						metadataBuilder.putString(MediaMetadataCompat.METADATA_KEY_ARTIST, infos.artist);
+						//album
+						metadataBuilder.putString(MediaMetadataCompat.METADATA_KEY_ALBUM, infos.album);
 
-					Bitmap art = getBitmapCover(infos.cover);
-					if(art != null){
-						metadataBuilder.putBitmap(MediaMetadataCompat.METADATA_KEY_ALBUM_ART, art);
-						metadataBuilder.putBitmap(MediaMetadataCompat.METADATA_KEY_ART, art);
+						Bitmap art = getBitmapCover(infos.cover);
+						if(art != null){
+							metadataBuilder.putBitmap(MediaMetadataCompat.METADATA_KEY_ALBUM_ART, art);
+							metadataBuilder.putBitmap(MediaMetadataCompat.METADATA_KEY_ART, art);
 
+						}
+
+						mediaSessionCompat.setMetadata(metadataBuilder.build());
+
+						if(infos.isPlaying)
+							setMediaPlaybackState(PlaybackStateCompat.STATE_PLAYING);
+						else
+							setMediaPlaybackState(PlaybackStateCompat.STATE_PAUSED);
+
+						callbackContext.success("success");
+					} catch (Exception e) {
+						// Handle the exception here
+						e.printStackTrace();
 					}
-
-					mediaSessionCompat.setMetadata(metadataBuilder.build());
-
-					if(infos.isPlaying)
-						setMediaPlaybackState(PlaybackStateCompat.STATE_PLAYING);
-					else
-						setMediaPlaybackState(PlaybackStateCompat.STATE_PAUSED);
-
-					callbackContext.success("success");
 				}
 			});
 		}

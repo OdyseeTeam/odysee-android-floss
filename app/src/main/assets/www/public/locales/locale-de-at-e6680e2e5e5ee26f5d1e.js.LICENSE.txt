@@ -1,0 +1,11 @@
+//! author : Martin Groller : https://github.com/MadMG
+
+//! author : Mikolaj Dadela : https://github.com/mik01aj
+
+//! author : lluchs : https://github.com/lluchs
+
+//! author: Menelion Elensúle: https://github.com/Oire
+
+//! locale : German (Austria) [de-at]
+
+//! moment.js locale configuration

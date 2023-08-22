@@ -1,0 +1,5 @@
+//! author : Mindaugas Mozūras : https://github.com/mmozuras
+
+//! locale : Lithuanian [lt]
+
+//! moment.js locale configuration

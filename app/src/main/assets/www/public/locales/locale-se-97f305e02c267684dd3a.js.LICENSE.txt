@@ -1,0 +1,5 @@
+//! authors : Bård Rolstad Henriksen : https://github.com/karamell
+
+//! locale : Northern Sami [se]
+
+//! moment.js locale configuration

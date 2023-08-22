@@ -1,0 +1,5 @@
+//! author : Alessandro Maruccia : https://github.com/alesma
+
+//! locale : Maltese (Malta) [mt]
+
+//! moment.js locale configuration

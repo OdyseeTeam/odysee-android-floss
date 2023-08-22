@@ -1,0 +1,7 @@
+//! author : Weldan Jamili : https://github.com/weldan
+
+//! locale : Malay [ms-my]
+
+//! moment.js locale configuration
+
+//! note : DEPRECATED, the correct one is [ms]

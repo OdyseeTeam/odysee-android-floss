@@ -1,0 +1,5 @@
+//! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
+
+//! locale : Maori [mi]
+
+//! moment.js locale configuration

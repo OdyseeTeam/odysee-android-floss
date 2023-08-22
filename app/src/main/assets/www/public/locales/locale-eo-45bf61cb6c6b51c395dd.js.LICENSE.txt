@@ -1,0 +1,11 @@
+//! author : Colin Dean : https://github.com/colindean
+
+//! author : Mia Nordentoft Imperatori : https://github.com/miestasmia
+
+//! comment : Vivakvo corrected the translation by colindean and miestasmia
+
+//! comment : miestasmia corrected the translation by colindean
+
+//! locale : Esperanto [eo]
+
+//! moment.js locale configuration

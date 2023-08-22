@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.odysee.floss" version="0.0.69" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.odysee.floss" version="0.0.83" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="MusicControls">
+        <param name="android-package" value="com.homerours.musiccontrols.MusicControls" />
+    </feature>
+    <feature name="Insomnia">
+        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
+    </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
@@ -9,29 +15,25 @@
     <feature name="BackgroundModeExt">
         <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundModeExt" />
     </feature>
+    <feature name="UniversalLinks">
+        <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
-    <feature name="Insomnia">
-        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
-    </feature>
-    <feature name="MusicControls">
-        <param name="android-package" value="com.homerours.musiccontrols.MusicControls" />
     </feature>
     <feature name="CDVOrientation">
         <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
     </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-        <param name="onload" value="true" />
+    <feature name="LocalNotification">
+        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
     </feature>
     <feature name="StatusBar">
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="UniversalLinks">
-        <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin" />
-        <param name="onload" value="true" />
+    <feature name="Badge">
+        <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge" />
     </feature>
     <name>Odysee</name>
     <description>Explore a whole universe of videos on Odysee from regular people just like you!</description>
@@ -44,30 +46,36 @@
     <allow-navigation href="https://odysee.com/*" />
     <allow-navigation href="https://www.odysee.com/*" />
     <allow-navigation href="https://accounts.google.com/*" />
+    <content-security-policy content="default-src 'self'; connect-src 'self' https://odysee.com/* https://www.odysee.com/* https://accounts.google.com/*" />
+    <universal-links>
+        <host name="odysee.com" scheme="https" />
+    </universal-links>
     <icon density="ldpi" height="512" src="res/logo.png" width="512" />
     <icon density="mdpi" height="512" src="res/logo.png" width="512" />
     <icon density="hdpi" height="512" src="res/logo.png" width="512" />
     <icon density="xhdpi" height="512" src="res/logo.png" width="512" />
     <icon density="xxhdpi" height="512" src="res/logo.png" width="512" />
     <icon density="xxxhdpi" height="512" src="res/logo.png" width="512" />
-    <splash density="port-hdpi" src="res/splash.png" />
-    <splash density="port-ldpi" src="res/splash.png" />
-    <splash density="port-mdpi" src="res/splash.png" />
-    <splash density="port-xhdpi" src="res/splash.png" />
-    <universal-links>
-        <host name="odysee.com" scheme="https" />
-    </universal-links>
     <resource-file src="res/android/drawable-mdpi/notification_icon.png" target="app/src/main/res/drawable-mdpi/notification_icon.png" />
     <resource-file src="res/android/drawable-hdpi/notification_icon.png" target="app/src/main/res/drawable-hdpi/notification_icon.png" />
     <resource-file src="res/android/drawable-xhdpi/notification_icon.png" target="app/src/main/res/drawable-xhdpi/notification_icon.png" />
     <resource-file src="res/android/drawable-xxhdpi/notification_icon.png" target="app/src/main/res/drawable-xxhdpi/notification_icon.png" />
     <resource-file src="res/android/drawable-xxxhdpi/notification_icon.png" target="app/src/main/res/drawable-xxxhdpi/notification_icon.png" />
+    <custom-config-file parent="./application" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification_icon" />
+    </custom-config-file>
+    <config-file parent="/manifest/application" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification_icon" />
+    </config-file>
     <preference name="loglevel" value="DEBUG" />
     <preference name="KeepRunning" value="true" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="hostname" value="odysee.com" />
-    <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
-    <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="AndroidLaunchMode" value="singleInstance" />
+    <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
     <preference name="AndroidXEnabled" value="true" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#111111" />
+    <preference name="AndroidWindowSplashScreenBrandingImage" value="res/odysee.png" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
+    <preference name="android-icon-accent" value="#ca004b" />
 </widget>

@@ -1,0 +1,5 @@
+//! author : Jared Morse : https://github.com/jarcoal
+
+//! locale : English (Australia) [en-au]
+
+//! moment.js locale configuration

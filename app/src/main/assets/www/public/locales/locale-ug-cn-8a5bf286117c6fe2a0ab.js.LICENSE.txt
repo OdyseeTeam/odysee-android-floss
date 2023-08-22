@@ -1,0 +1,5 @@
+//! author: boyaq : https://github.com/boyaq
+
+//! locale : Uyghur (China) [ug-cn]
+
+//! moment.js locale configuration

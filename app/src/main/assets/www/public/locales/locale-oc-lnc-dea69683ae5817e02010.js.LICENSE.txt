@@ -1,0 +1,5 @@
+//! author : Quentin PAGÈS : https://github.com/Quenty31
+
+//! locale : Occitan, lengadocian dialecte [oc-lnc]
+
+//! moment.js locale configuration

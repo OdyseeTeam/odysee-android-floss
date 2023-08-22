@@ -1,0 +1,5 @@
+//! author : Chris Gedrim : https://github.com/chrisgedrim
+
+//! locale : English (Israel) [en-il]
+
+//! moment.js locale configuration

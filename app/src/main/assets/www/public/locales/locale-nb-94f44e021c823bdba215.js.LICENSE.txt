@@ -1,0 +1,9 @@
+//!           Sigurd Gartmann : https://github.com/sigurdga
+
+//!           Stephen Ramthun : https://github.com/stephenramthun
+
+//! authors : Espen Hovlandsdal : https://github.com/rexxars
+
+//! locale : Norwegian Bokmål [nb]
+
+//! moment.js locale configuration

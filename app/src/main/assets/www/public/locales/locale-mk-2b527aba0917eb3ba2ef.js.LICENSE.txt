@@ -1,0 +1,7 @@
+//! author : Borislav Mickov : https://github.com/B0k0
+
+//! author : Sashko Todorov : https://github.com/bkyceh
+
+//! locale : Macedonian [mk]
+
+//! moment.js locale configuration

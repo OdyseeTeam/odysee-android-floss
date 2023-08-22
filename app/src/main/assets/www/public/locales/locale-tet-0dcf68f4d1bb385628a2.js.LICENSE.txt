@@ -1,0 +1,9 @@
+//! author : Joshua Brooks : https://github.com/joshbrooks
+
+//! author : Onorio De J. Afonso : https://github.com/marobo
+
+//! author : Sonia Simoes : https://github.com/soniasimoes
+
+//! locale : Tetun Dili (East Timor) [tet]
+
+//! moment.js locale configuration
