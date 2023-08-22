@@ -27,18 +27,15 @@
 	* Screen orientation						cordova-plugin-screen-orientation	
 	* Notifications									https://github.com/parmantolab/cordova-plugin-local-notifications	
 	* Status Bar										cordova-plugin-statusbar
+	*
 	* Fastlane											https://github.com/bamlab/fastlane-plugin-cordova
 */
 
 // Run			cordova run android
-// Alias		alias buildgoogle='cordova plugins rm cordova-plugin-apkupdater; cordova build --release --buildConfig=build.json'
-// Alias		alias buildapk='cordova plugins add cordova-plugin-apkupdater; cordova build --release --buildConfig=build.json'
-// Build		buildgoogle || buildapk
-// ssh			ssh odysee@135.148.33.227
-// sshfs		sshfs odysee@135.148.33.227:/home/odysee/apkhost/ /home/rave/Work/ODYSEE/REMOTE
+// Build		cordova build --release --buildConfig=build.json
 
 const mode = 'floss'
-const version = '78'
+const version = '83'
 const log = mode === 'dev' ? true : false
 var payload = undefined
 var lockControls = false

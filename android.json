@@ -10,7 +10,7 @@
           "/manifest/application": [
             {
               "xml": "<meta-data android:name=\"com.google.firebase.messaging.default_notification_icon\" android:resource=\"@drawable/notification_icon\" />",
-              "count": 3
+              "count": 6
             },
             {
               "xml": "<service android:foregroundServiceType=\"mediaPlayback\" android:name=\"com.homerours.musiccontrols.MusicControlsNotificationKiller\" android:stopWithTask=\"true\" />",
