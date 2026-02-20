@@ -1,3 +1,0 @@
-.card--thumbnail .thumbnail-picker__preview{font-size:var(--font-small);height:calc(var(--thumbnail-preview-height)*1.5);width:calc(var(--thumbnail-preview-width)*1.5)}[dir] .card--thumbnail .thumbnail-picker__preview{background-color:var(--color-thumbnail-background);background-position:50% 50%;background-repeat:no-repeat;background-size:cover;border-radius:var(--border-radius);padding:var(--spacing-s)}[dir] .card--thumbnail .column__item{margin-bottom:0}@media(max-width:900px){.card--thumbnail .thumbnail-picker__preview{aspect-ratio:16/9;height:unset;width:100%}[dir] .card--thumbnail .thumbnail-picker__preview{margin-bottom:var(--spacing-s)}}
-
-/*# sourceMappingURL=selectThumbnail.31aa2b5252145576e39c.css.map*/

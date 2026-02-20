@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkodysee_com=self.webpackChunkodysee_com||[]).push([[7204],{18926:(e,s,t)=>{t.r(s),t.d(s,{default:()=>d});var n=t(3658),o=t(94800),l=t(17351),c=t(88441),u=t(9319),r=t(44316),a=t(71036).__;const i=function(){return c.createElement(u.Z,null,c.createElement(r.Z,{limitShow:300,showClose:!1,title:a("Follow new tags")}))};const d=(0,n.$j)((function(e){return{followedTags:(0,o.N1)(e),subscribedChannels:(0,l.qf)(e),suggestedSubscriptions:(0,l.sq)(e)}}))(i)}}]);
-//# sourceMappingURL=tagsFollowingManage-7260dc14c30eb1218187.js.map

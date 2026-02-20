@@ -1,20 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.odysee.floss" version="0.0.83" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <feature name="MusicControls">
-        <param name="android-package" value="com.homerours.musiccontrols.MusicControls" />
-    </feature>
-    <feature name="Insomnia">
-        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <feature name="BackgroundMode">
-        <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundMode" />
-    </feature>
-    <feature name="BackgroundModeExt">
-        <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundModeExt" />
-    </feature>
+<widget id="com.odysee.floss" version="0.0.119" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="UniversalLinks">
         <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin" />
         <param name="onload" value="true" />
@@ -25,15 +10,41 @@
     <feature name="CDVOrientation">
         <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
     </feature>
-    <feature name="LocalNotification">
-        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
-    </feature>
     <feature name="StatusBar">
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="Badge">
-        <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge" />
+    <feature name="AndroidFullScreen">
+        <param name="android-package" value="com.mesmotronic.plugins.FullScreenPlugin" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="MusicControls">
+        <param name="android-package" value="com.homerours.musiccontrols.MusicControls" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
+    </feature>
+    <feature name="Insomnia">
+        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
+    </feature>
+    <feature name="Pip">
+        <param name="android-package" value="tv.odysee.pip.Pip" />
+    </feature>
+    <feature name="BackgroundMode">
+        <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundMode" />
+    </feature>
+    <feature name="BackgroundModeExt">
+        <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundModeExt" />
     </feature>
     <name>Odysee</name>
     <description>Explore a whole universe of videos on Odysee from regular people just like you!</description>
@@ -46,10 +57,13 @@
     <allow-navigation href="https://odysee.com/*" />
     <allow-navigation href="https://www.odysee.com/*" />
     <allow-navigation href="https://accounts.google.com/*" />
-    <content-security-policy content="default-src 'self'; connect-src 'self' https://odysee.com/* https://www.odysee.com/* https://accounts.google.com/*" />
+    <allow-navigation href="https://connect.wander.app/*" />
+    <allow-navigation href="https://wander-connect-test.vercel.app/*" />
+    <content-security-policy content="default-src 'self'; connect-src 'self' https://odysee.com/* https://www.odysee.com/* https://accounts.google.com/*; frame-src 'self' https://*.odycdn.com" />
     <universal-links>
         <host name="odysee.com" scheme="https" />
     </universal-links>
+    <hook src="hooks/after_prepare/030-apply-pip.js" type="after_prepare" />
     <icon density="ldpi" height="512" src="res/logo.png" width="512" />
     <icon density="mdpi" height="512" src="res/logo.png" width="512" />
     <icon density="hdpi" height="512" src="res/logo.png" width="512" />
@@ -61,15 +75,20 @@
     <resource-file src="res/android/drawable-xhdpi/notification_icon.png" target="app/src/main/res/drawable-xhdpi/notification_icon.png" />
     <resource-file src="res/android/drawable-xxhdpi/notification_icon.png" target="app/src/main/res/drawable-xxhdpi/notification_icon.png" />
     <resource-file src="res/android/drawable-xxxhdpi/notification_icon.png" target="app/src/main/res/drawable-xxxhdpi/notification_icon.png" />
-    <custom-config-file parent="./application" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
-        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification_icon" />
-    </custom-config-file>
-    <config-file parent="/manifest/application" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
-        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification_icon" />
-    </config-file>
+    <resource-file src="res/android/values/colors.xml" target="app/src/main/res/values/colors.xml" />
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+        <application android:hardwareAccelerated="true" android:largeHeap="true" />
+    </edit-config>
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity[@android:name='MainActivity']" xmlns:android="http://schemas.android.com/apk/res/android">
+        <activity android:resizeableActivity="true" android:supportsPictureInPicture="true" />
+    </edit-config>
+    <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity[@android:name='MainActivity']" xmlns:android="http://schemas.android.com/apk/res/android">
+        <activity android:resizeableActivity="true" android:supportsPictureInPicture="true" />
+    </edit-config>
     <preference name="loglevel" value="DEBUG" />
-    <preference name="KeepRunning" value="true" />
     <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="GradlePluginKotlinEnabled" value="true" />
     <preference name="hostname" value="odysee.com" />
     <preference name="AndroidLaunchMode" value="singleInstance" />
     <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
@@ -78,4 +97,11 @@
     <preference name="AndroidWindowSplashScreenBrandingImage" value="res/odysee.png" />
     <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
     <preference name="android-icon-accent" value="#ca004b" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="android-compileSdkVersion" value="35" />
+    <preference name="android-targetSdkVersion" value="35" />
+    <preference name="WebViewAllowFileAccess" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="AndroidWebViewAcceptThirdPartyCookies" value="true" />
+    <preference name="ShouldAllowNavigation" value="true" />
 </widget>

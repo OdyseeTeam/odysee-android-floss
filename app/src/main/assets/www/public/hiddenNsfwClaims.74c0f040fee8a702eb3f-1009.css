@@ -1,0 +1,3 @@
+[dir] .info-wrapper{background-color:var(--color-error);border-radius:var(--border-radius);margin-top:var(--spacing-m);padding:var(--spacing-m)}[dir] .info-wrapper .icon{margin-bottom:-2px}[dir=ltr] .info-wrapper .icon{margin-right:var(--spacing-xxs)}[dir=rtl] .info-wrapper .icon{margin-left:var(--spacing-xxs)}.info-wrapper label{color:#000}[dir] .info-wrapper label{margin-top:0}.info-wrapper .button--link,.info-wrapper p{color:var(--color-text-error)}
+
+/*# sourceMappingURL=hiddenNsfwClaims.74c0f040fee8a702eb3f-1009.css.map*/

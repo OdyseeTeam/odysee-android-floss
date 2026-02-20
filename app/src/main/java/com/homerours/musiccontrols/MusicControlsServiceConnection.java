@@ -28,15 +28,14 @@ public class MusicControlsServiceConnection implements ServiceConnection {
             return;
         }
 
-        if (isPlaying) {
-            try {
+        try {
+            if (isPlaying) {
                 this.service.setForeground(notification);
-            } catch (Exception e) {
-                // Handle the exception here
-                e.printStackTrace();
+            } else {
+                this.service.clearForeground();
             }
-        } else {
-            this.service.clearForeground();
+        } catch (Exception e) {
+            // ignore .. this happens when the controls are active, and a phone call is made and ends to resume the audio
         }
     }
 }

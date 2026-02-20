@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
+    <color name="accent">#ca004b</color>
     <color name="cdv_splashscreen_background">#111111</color>
 </resources>

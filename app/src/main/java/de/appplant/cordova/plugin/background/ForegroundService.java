@@ -29,6 +29,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ServiceInfo;
 import android.content.res.Resources;
 import android.os.Binder;
 import android.os.Build;
@@ -129,7 +130,11 @@ public class ForegroundService extends Service {
         boolean isSilent    = settings.optBoolean("silent", false);
 
         if (!isSilent) {
-            startForeground(NOTIFICATION_ID, makeNotification());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                startForeground(NOTIFICATION_ID, makeNotification(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
+            } else {
+                startForeground(NOTIFICATION_ID, makeNotification());
+            }
         }
 
         PowerManager pm = (PowerManager)getSystemService(POWER_SERVICE);
@@ -152,6 +157,8 @@ public class ForegroundService extends Service {
             wakeLock.release();
             wakeLock = null;
         }
+
+        stopSelf();
     }
 
     /**
@@ -219,10 +226,15 @@ public class ForegroundService extends Service {
         setColor(notification, settings);
 
         if (intent != null && settings.optBoolean("resume")) {
+             int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+
+            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                flags = flags | PendingIntent.FLAG_MUTABLE;
+            }
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             PendingIntent contentIntent = PendingIntent.getActivity(
                     context, NOTIFICATION_ID, intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+                    flags);
 
 
             notification.setContentIntent(contentIntent);

@@ -37,12 +37,7 @@ public class MusicControlsNotificationKiller extends Service {
 	}
 
 	public void setForeground(Notification notification) {
-		try {
-			this.startForeground(this.NOTIFICATION_ID, notification);
-        } catch (Exception e) {
-        	// Handle the exception here
-            e.printStackTrace();
-        }
+		this.startForeground(this.NOTIFICATION_ID, notification);
 	}
 
 	public void clearForeground() {
