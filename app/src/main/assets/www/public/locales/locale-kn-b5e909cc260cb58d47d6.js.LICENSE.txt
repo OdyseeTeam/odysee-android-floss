@@ -1,5 +1,0 @@
-//! author : Rajeev Naik : https://github.com/rajeevnaikte
-
-//! locale : Kannada [kn]
-
-//! moment.js locale configuration

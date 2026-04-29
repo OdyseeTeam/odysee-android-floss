@@ -1,0 +1,2 @@
+import{p as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~mysmahpy-CrzliWTY.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";var n=t(e());function r(e){let{when:t,message:r}=e;return n.useEffect(()=>{if(!t)return;let e=e=>{e.preventDefault()};return window.addEventListener(`beforeunload`,e),()=>window.removeEventListener(`beforeunload`,e)},[t,r]),null}export{r as t};
+//# sourceMappingURL=navigation-prompt-u2h4Hta_.js.map

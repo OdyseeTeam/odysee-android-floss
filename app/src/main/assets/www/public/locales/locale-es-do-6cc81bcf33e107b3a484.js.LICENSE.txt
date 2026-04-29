@@ -1,3 +1,0 @@
-//! locale : Spanish (Dominican Republic) [es-do]
-
-//! moment.js locale configuration

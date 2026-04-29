@@ -1,0 +1,3 @@
+function e(e){let t=e.split(`:`).reverse();return(t.length>=3?+t[2]:0)*60*60+(t.length>=2?+t[1]:0)*60+(t.length>=1?+t[0]:0)}function t(e){switch(e.length){case 4:return/^[0-9]:[0-5][0-9]$/.test(e);case 5:return/^[0-5][0-9]:[0-5][0-9]$/.test(e);case 7:return/^[0-9]:[0-5][0-9]:[0-5][0-9]$/.test(e);case 8:return/^[0-9][0-9]:[0-5][0-9]:[0-5][0-9]$/.test(e);default:return!1}}function n(n){if(!n)return[];let r=[],i=n.split(`
+`);for(let n of i){let i=n.match(/^(\d[\d:]*(?::\d\d))\s*[-–—]?\s*(.+)/);if(!i)continue;let a=i[1].replace(/:+$/,``),o=i[2].trim();!t(a)||!o||r.push({time:e(a),label:o,timestamp:a})}return r.length>=2?r:[]}export{n as t};
+//# sourceMappingURL=parse-chapters-B8ztG91H.js.map

@@ -1,0 +1,1 @@
+.sortable{margin-bottom:var(--spacing-m)}.sortable__item{align-items:center;display:flex}.sortable__item--hidden{display:none}.sortable__drag-handle{opacity:.4;margin-right:var(--spacing-xxs)}.sortable__item:last-child{margin-bottom:0}

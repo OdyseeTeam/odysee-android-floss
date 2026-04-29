@@ -1,5 +1,0 @@
-//! author : Fahad Kassim : https://github.com/fadsel
-
-//! locale : Swahili [sw]
-
-//! moment.js locale configuration

@@ -1,0 +1,1 @@
+{"version":3,"file":"channel-BHOTcaMf.js","names":[],"sources":["../../../../ui/contexts/channel.ts"],"sourcesContent":["import React from 'react';\nexport const ChannelPageContext = React.createContext<any>(undefined);\n"],"mappings":"0LACA,IAAa,SAA2B,cAAmB,IAAA,GAAU"}

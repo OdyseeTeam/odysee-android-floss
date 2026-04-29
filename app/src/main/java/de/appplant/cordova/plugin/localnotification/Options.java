@@ -57,6 +57,9 @@ import de.appplant.cordova.plugin.localnotification.util.AssetUtil;
 public final class Options {
 
     private static final String TAG = "Options";
+    
+    // Key name for bundled launch extra
+    public static final String EXTRA_LAUNCH = "NOTIFICATION_LAUNCH";
 
     public static final String LARGE_ICON_TYPE_SQUARE = "square";
     public static final String LARGE_ICON_TYPE_CIRCLE = "circle";
@@ -93,8 +96,8 @@ public final class Options {
             if (isVersionOlder(metaVersion, "1.1.8")) convertPropertiesForVersion118(options);
 
             // Update meta.version to current plugin version
-            if (!metaVersion.equals("1.2.3")) {
-                meta.put("version", "1.2.3");
+            if (!metaVersion.equals("1.2.2")) {
+                meta.put("version", "1.2.2");
                 options.put("meta", meta);
             }
         } catch (JSONException exception) {
@@ -820,10 +823,27 @@ public final class Options {
     }
 
     /**
-     * Gets the actions group id or null if not set.
+     * Gets the list of actions to display.
+     * @return null if there are no actions.
      */
-    public ActionGroup getActionsGroup() {
-        return ActionGroup.get(context, options.optString("actions", null));
+    Action[] getActions() {
+        Object actions = options.opt("actions");
+        if (actions == null) return null;
+
+        // Get the action group
+        ActionGroup actionGroup = null;
+
+        // Action is a group id like actions: 'YES_NO_CATEGORY'
+        if (actions instanceof String) {
+            actionGroup = ActionGroup.lookup((String) actions);
+
+            // Action is a list of actions like actions: [{...}, {...}]
+            // Note: Will be not supported anymore in the future
+        } else if (actions instanceof JSONArray) {;
+            actionGroup = ActionGroup.parse(context, (JSONArray) actions);
+        }
+
+        return actionGroup != null ? actionGroup.getActions() : null;
     }
 
     /**

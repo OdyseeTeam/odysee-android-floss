@@ -1,5 +1,0 @@
-//! author : Atamyrat Abdyrahmanov : https://github.com/atamyratabdy
-
-//! locale : Turkmen [tk]
-
-//! moment.js locale configuration

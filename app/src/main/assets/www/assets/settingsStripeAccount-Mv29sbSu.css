@@ -1,0 +1,1 @@
+.connected-account-information h3:first-of-type{margin-bottom:var(--spacing-xs)}.connected-account-information .bolded-email{font-weight:var(--font-weight-bold)}.stripe__view-account-button{max-width:241px;margin-left:var(--spacing-s)}@media (max-width:900px){.stripe__view-account-button{margin-left:0;margin-top:var(--spacing-s);display:block}}

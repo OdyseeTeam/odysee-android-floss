@@ -1,5 +1,0 @@
-//! author : Matthew Castrillon-Madrigal : https://github.com/techdimension
-
-//! locale : English (Singapore) [en-sg]
-
-//! moment.js locale configuration

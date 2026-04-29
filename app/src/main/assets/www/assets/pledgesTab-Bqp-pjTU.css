@@ -1,0 +1,1 @@
+.th-label-with-arrows{align-items:center;gap:4px;display:flex}.arrows{flex-direction:row;line-height:1;display:flex}.arrow-up{text-align:center;opacity:.5;font-size:16px}.arrow-up--active{color:var(--color-primary);opacity:1}.arrow-down{text-align:center;opacity:.5;font-size:16px}.arrow-down--active{color:var(--color-primary);opacity:1}

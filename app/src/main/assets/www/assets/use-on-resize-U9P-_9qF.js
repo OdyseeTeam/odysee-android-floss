@@ -1,0 +1,2 @@
+import{p as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~mysmahpy-CrzliWTY.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";import{t as n}from"./debounce-BlyCD4p9.js";var r=t(e());function i(e){let t=typeof window==`object`;(0,r.useEffect)(()=>{t&&n(e,100)()},[]),(0,r.useEffect)(()=>{let r=n(e,100);if(t)return window.addEventListener(`resize`,r),()=>window.removeEventListener(`resize`,r)},[t,e])}export{i as t};
+//# sourceMappingURL=use-on-resize-U9P-_9qF.js.map

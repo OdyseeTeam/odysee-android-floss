@@ -1,7 +1,0 @@
-//! author : Iustì Canun
-
-//! author : Robin van der Vliet : https://github.com/robin0van0der0v
-
-//! locale : Talossan [tzl]
-
-//! moment.js locale configuration

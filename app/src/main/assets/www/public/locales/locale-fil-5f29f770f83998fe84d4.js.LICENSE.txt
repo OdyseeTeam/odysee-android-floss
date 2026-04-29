@@ -1,7 +1,0 @@
-//! author : Dan Hagman : https://github.com/hagmandan
-
-//! author : Matthew Co : https://github.com/matthewdeeco
-
-//! locale : Filipino [fil]
-
-//! moment.js locale configuration

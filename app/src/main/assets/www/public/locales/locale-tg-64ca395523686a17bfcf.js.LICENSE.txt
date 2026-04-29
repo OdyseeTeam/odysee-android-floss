@@ -1,5 +1,0 @@
-//! author : Orif N. Jr. : https://github.com/orif-jr
-
-//! locale : Tajik [tg]
-
-//! moment.js locale configuration

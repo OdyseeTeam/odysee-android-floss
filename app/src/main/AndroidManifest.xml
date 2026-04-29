@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<manifest android:hardwareAccelerated="true" android:versionCode="119" android:versionName="0.0.119" xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest android:hardwareAccelerated="true" android:versionCode="122" android:versionName="0.0.122" xmlns:android="http://schemas.android.com/apk/res/android">
   <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.BLUETOOTH"/>
@@ -9,7 +9,7 @@
   <uses-permission android:name="android.permission.WAKE_LOCK"/>
   <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
   <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true">
-    <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation" android:exported="true" android:label="@string/activity_name" android:launchMode="singleInstance" android:name="MainActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:theme="@style/Theme.App.SplashScreen" android:windowSoftInputMode="adjustResize">
+    <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation" android:exported="true" android:label="@string/activity_name" android:launchMode="singleInstance" android:name="MainActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:theme="@style/Theme.App.SplashScreen" android:windowLayoutInDisplayCutoutMode="never" android:windowSoftInputMode="adjustResize">
       <intent-filter android:label="@string/launcher_name">
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
@@ -21,7 +21,7 @@
         <data android:host="odysee.com" android:scheme="https"/>
       </intent-filter>
     </activity>
-    <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="de.appplant.cordova.plugin.localnotification.ClickActivity" android:taskAffinity=""/>
+    <activity android:excludeFromRecents="true" android:exported="false" android:name="de.appplant.cordova.plugin.localnotification.NotificationClickActivity" android:taskAffinity=""/>
     <provider android:authorities="${applicationId}.cdv.core.file.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/cdv_core_file_provider_paths"/>
     </provider>

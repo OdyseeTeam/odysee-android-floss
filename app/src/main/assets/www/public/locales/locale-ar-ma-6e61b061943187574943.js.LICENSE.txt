@@ -1,7 +1,0 @@
-//! author : Abdel Said : https://github.com/abdelsaid
-
-//! author : ElFadili Yassine : https://github.com/ElFadiliY
-
-//! locale : Arabic (Morocco) [ar-ma]
-
-//! moment.js locale configuration

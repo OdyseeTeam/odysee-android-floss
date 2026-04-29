@@ -1,0 +1,2 @@
+var e=0,t=0;function n(){t===0&&(e=window.scrollY,document.body.style.position=`fixed`,document.body.style.top=`-${e}px`,document.body.style.left=`0`,document.body.style.right=`0`,document.body.style.overflow=`hidden`),t++}function r(){t=Math.max(0,t-1),t===0&&(document.body.style.position=``,document.body.style.top=``,document.body.style.left=``,document.body.style.right=``,document.body.style.overflow=``,window.scrollTo(0,e))}export{r as n,n as t};
+//# sourceMappingURL=body-scroll-lock-CuUXGrqv.js.map

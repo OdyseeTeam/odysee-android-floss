@@ -1,0 +1,1 @@
+{"version":3,"file":"email-C5D1LvPy.js","names":[],"sources":["../../../../ui/constants/email.ts"],"sourcesContent":["export const EMAIL_REGEX = /^[^@]+@[^@]+$/;\n"],"mappings":"AAAA,IAAa,EAAc"}

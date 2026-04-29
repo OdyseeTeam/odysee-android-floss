@@ -1,0 +1,1 @@
+{"version":3,"file":"expandable-uvG5jjIH.js","names":[],"sources":["../../../../ui/contexts/expandable.ts"],"sourcesContent":["import React from 'react';\nexport const ExpandableContext = React.createContext<any>(undefined);\n"],"mappings":"0LACA,IAAa,SAA0B,cAAmB,IAAA,GAAU"}

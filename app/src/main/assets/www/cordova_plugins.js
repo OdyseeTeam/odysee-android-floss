@@ -1,52 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "cordova-plugin-universal-links.universalLinks",
-      "file": "plugins/cordova-plugin-universal-links/www/universal_links.js",
-      "pluginId": "cordova-plugin-universal-links",
-      "clobbers": [
-        "universalLinks"
-      ]
-    },
-    {
-      "id": "cordova-plugin-inappbrowser.inappbrowser",
-      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-      "pluginId": "cordova-plugin-inappbrowser",
-      "clobbers": [
-        "cordova.InAppBrowser.open"
-      ]
-    },
-    {
-      "id": "es6-promise-plugin.Promise",
-      "file": "plugins/es6-promise-plugin/www/promise.js",
-      "pluginId": "es6-promise-plugin",
-      "runs": true
-    },
-    {
-      "id": "cordova-plugin-screen-orientation.screenorientation",
-      "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
-      "pluginId": "cordova-plugin-screen-orientation",
-      "clobbers": [
-        "cordova.plugins.screenorientation"
-      ]
-    },
-    {
-      "id": "cordova-plugin-statusbar.statusbar",
-      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-      "pluginId": "cordova-plugin-statusbar",
-      "clobbers": [
-        "window.StatusBar"
-      ]
-    },
-    {
-      "id": "cordova-plugin-fullscreen.AndroidFullScreen",
-      "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
-      "pluginId": "cordova-plugin-fullscreen",
-      "clobbers": [
-        "AndroidFullScreen"
-      ]
-    },
-    {
       "id": "cordova-plugin-file.DirectoryEntry",
       "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
       "pluginId": "cordova-plugin-file",
@@ -228,6 +182,44 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "runs": true
     },
     {
+      "id": "es6-promise-plugin.Promise",
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-universal-links.universalLinks",
+      "file": "plugins/cordova-plugin-universal-links/www/universal_links.js",
+      "pluginId": "cordova-plugin-universal-links",
+      "clobbers": [
+        "universalLinks"
+      ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open"
+      ]
+    },
+    {
+      "id": "cordova-plugin-screen-orientation.screenorientation",
+      "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+      "pluginId": "cordova-plugin-screen-orientation",
+      "clobbers": [
+        "cordova.plugins.screenorientation"
+      ]
+    },
+    {
+      "id": "cordova-plugin-fullscreen.AndroidFullScreen",
+      "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
+      "pluginId": "cordova-plugin-fullscreen",
+      "clobbers": [
+        "AndroidFullScreen"
+      ]
+    },
+    {
       "id": "cordova-plugin-file-transfer.FileTransferError",
       "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
       "pluginId": "cordova-plugin-file-transfer",
@@ -294,17 +286,17 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     }
   ];
   module.exports.metadata = {
+    "cordova-androidx-build": "1.0.4",
+    "cordova-plugin-file": "8.0.0",
+    "es6-promise-plugin": "4.2.2",
     "cordova-plugin-universal-links": "0.3.0",
     "cordova-plugin-inappbrowser": "5.0.0",
-    "es6-promise-plugin": "4.2.2",
     "cordova-plugin-screen-orientation": "3.0.3",
-    "cordova-plugin-statusbar": "3.0.0",
     "cordova-plugin-fullscreen": "1.3.0",
-    "cordova-plugin-file": "8.1.3",
-    "cordova-plugin-file-transfer": "2.0.1-dev",
+    "cordova-plugin-file-transfer": "2.0.0-dev",
     "cordova-plugin-music-controls2": "3.0.7",
     "cordova-plugin-device": "3.0.0",
-    "cordova-plugin-local-notification": "1.2.3",
+    "cordova-plugin-local-notification": "1.2.2",
     "cordova-plugin-insomnia": "4.3.0",
     "cordova-plugin-webview-tune": "1.0.0",
     "cordova-plugin-android-pip-lite": "1.0.0",

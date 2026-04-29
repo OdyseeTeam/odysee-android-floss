@@ -3,3 +3,7 @@ apply from: "cdv-gradle-name.gradle"
 include ":"
 include ":CordovaLib"
 include ":app"
+
+if (file("settings-extras.gradle").exists()) {
+    apply from: "settings-extras.gradle"
+}

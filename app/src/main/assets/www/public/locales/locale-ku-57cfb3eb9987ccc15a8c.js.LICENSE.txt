@@ -1,5 +1,0 @@
-//! author : Shahram Mebashar : https://github.com/ShahramMebashar
-
-//! locale : Kurdish [ku]
-
-//! moment.js locale configuration

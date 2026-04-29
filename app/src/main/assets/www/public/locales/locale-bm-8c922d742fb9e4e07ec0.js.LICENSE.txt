@@ -1,5 +1,0 @@
-//! author : Estelle Comment : https://github.com/estellecomment
-
-//! locale : Bambara [bm]
-
-//! moment.js locale configuration

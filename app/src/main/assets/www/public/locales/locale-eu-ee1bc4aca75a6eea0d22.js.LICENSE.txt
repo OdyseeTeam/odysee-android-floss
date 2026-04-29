@@ -1,5 +1,0 @@
-//! author : Eneko Illarramendi : https://github.com/eillarra
-
-//! locale : Basque [eu]
-
-//! moment.js locale configuration

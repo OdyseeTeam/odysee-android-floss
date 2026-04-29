@@ -47,6 +47,7 @@ public class Pip extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        Log.d("Pip", "execute called with action: " + action);
         if ("isSupported".equals(action)) {
             callbackContext.success(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? 1 : 0);
             return true;
@@ -82,8 +83,10 @@ public class Pip extends CordovaPlugin {
             return true;
         }
         if ("setAutoOnBackground".equals(action)) {
+            Log.d("Pip", "setAutoOnBackground action received");
             JSONObject o = args != null ? args.optJSONObject(0) : null;
             autoOnBackground = o != null && o.optBoolean("enabled", true);
+            Log.d("Pip", "setAutoOnBackground: " + autoOnBackground + " (API " + Build.VERSION.SDK_INT + ")");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 if (autoOnBackground) {
                     updatePictureInPictureParams();
@@ -102,6 +105,7 @@ public class Pip extends CordovaPlugin {
                 aspectWidth = o.optInt("width", 16);
                 aspectHeight = o.optInt("height", 9);
             }
+            Log.d("Pip", "setAspectRatio called: " + aspectWidth + "x" + aspectHeight);
             updatePictureInPictureParams();
             callbackContext.success();
             return true;
@@ -118,6 +122,7 @@ public class Pip extends CordovaPlugin {
             final int w = aspectWidth;
             final int h = aspectHeight;
             final boolean auto = autoOnBackground;
+            Log.d("Pip", "updatePictureInPictureParams: " + w + "x" + h + " auto=" + auto);
             activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {

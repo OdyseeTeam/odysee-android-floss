@@ -134,6 +134,15 @@
   display:none;
 }
 
+@media (orientation: portrait) {
+  html.odysee-fs-active .player-fullscreen-target > .content__wrapper,
+  html.odysee-fs-active .player-fullscreen-target > .video-fullscreen__actions-wrapper {
+    padding-top: env(safe-area-inset-top, 30px) !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+}
+
 body.pip-active *,
 html.pip-active * {
   scrollbar-width: none !important;

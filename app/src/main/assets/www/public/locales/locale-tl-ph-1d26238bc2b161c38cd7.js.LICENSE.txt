@@ -1,5 +1,0 @@
-//! author : Dan Hagman : https://github.com/hagmandan
-
-//! locale : Tagalog (Philippines) [tl-ph]
-
-//! moment.js locale configuration

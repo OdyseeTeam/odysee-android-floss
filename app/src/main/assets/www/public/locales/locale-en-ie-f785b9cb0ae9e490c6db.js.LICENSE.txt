@@ -1,5 +1,0 @@
-//! author : Chris Cartlidge : https://github.com/chriscartlidge
-
-//! locale : English (Ireland) [en-ie]
-
-//! moment.js locale configuration

@@ -1,7 +1,0 @@
-//! author : Nedim Cholich : https://github.com/frontyard
-
-//! based on (hr) translation by Bojan Marković
-
-//! locale : Bosnian [bs]
-
-//! moment.js locale configuration

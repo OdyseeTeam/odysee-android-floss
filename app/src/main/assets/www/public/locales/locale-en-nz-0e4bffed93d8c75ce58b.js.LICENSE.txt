@@ -1,5 +1,0 @@
-//! author : Luke McGregor : https://github.com/lukemcgregor
-
-//! locale : English (New Zealand) [en-nz]
-
-//! moment.js locale configuration

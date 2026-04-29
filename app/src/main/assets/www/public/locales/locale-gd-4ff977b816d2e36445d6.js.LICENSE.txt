@@ -1,5 +1,0 @@
-//! author : Jon Ashdown : https://github.com/jonashdown
-
-//! locale : Scottish Gaelic [gd]
-
-//! moment.js locale configuration

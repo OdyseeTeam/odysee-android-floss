@@ -1,5 +1,0 @@
-//! author : Andrew Hood : https://github.com/andrewhood125
-
-//! locale : Pseudo [x-pseudo]
-
-//! moment.js locale configuration

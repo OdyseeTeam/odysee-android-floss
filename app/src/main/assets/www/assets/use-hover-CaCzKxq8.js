@@ -1,0 +1,2 @@
+import{p as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~mysmahpy-CrzliWTY.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";var n=t(e());function r(e){let[t,r]=(0,n.useState)(!1),i=()=>r(!0),a=()=>r(!1);return(0,n.useEffect)(()=>{let t=e.current;if(t)return t.addEventListener(`mouseenter`,i),t.addEventListener(`mouseleave`,a),()=>{t.removeEventListener(`mouseenter`,i),t.removeEventListener(`mouseleave`,a)}},[e,t]),t}export{r as t};
+//# sourceMappingURL=use-hover-CaCzKxq8.js.map

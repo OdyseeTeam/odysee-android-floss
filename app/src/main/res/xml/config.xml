@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.odysee.floss" version="0.0.119" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.odysee.floss" version="0.0.122" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
     <feature name="UniversalLinks">
         <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin" />
         <param name="onload" value="true" />
@@ -10,18 +15,9 @@
     <feature name="CDVOrientation">
         <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
     </feature>
-    <feature name="StatusBar">
-        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
-        <param name="onload" value="true" />
-    </feature>
     <feature name="AndroidFullScreen">
         <param name="android-package" value="com.mesmotronic.plugins.FullScreenPlugin" />
     </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <allow-navigation href="cdvfile:*" />
     <feature name="FileTransfer">
         <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
     </feature>
@@ -80,26 +76,26 @@
         <application android:hardwareAccelerated="true" android:largeHeap="true" />
     </edit-config>
     <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity[@android:name='MainActivity']" xmlns:android="http://schemas.android.com/apk/res/android">
-        <activity android:resizeableActivity="true" android:supportsPictureInPicture="true" />
+        <activity android:resizeableActivity="true" android:supportsPictureInPicture="true" android:windowLayoutInDisplayCutoutMode="never" />
     </edit-config>
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity[@android:name='MainActivity']" xmlns:android="http://schemas.android.com/apk/res/android">
-        <activity android:resizeableActivity="true" android:supportsPictureInPicture="true" />
+        <activity android:resizeableActivity="true" android:supportsPictureInPicture="true" android:windowLayoutInDisplayCutoutMode="never" />
     </edit-config>
     <preference name="loglevel" value="DEBUG" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="KeepRunning" value="true" />
     <preference name="GradlePluginKotlinEnabled" value="true" />
     <preference name="hostname" value="odysee.com" />
     <preference name="AndroidLaunchMode" value="singleInstance" />
     <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
     <preference name="AndroidXEnabled" value="true" />
+    <preference name="BackgroundColor" value="0xff111111" />
     <preference name="AndroidWindowSplashScreenBackground" value="#111111" />
     <preference name="AndroidWindowSplashScreenBrandingImage" value="res/odysee.png" />
     <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
     <preference name="android-icon-accent" value="#ca004b" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <preference name="android-compileSdkVersion" value="35" />
-    <preference name="android-targetSdkVersion" value="35" />
+    <preference name="android-compileSdkVersion" value="36" />
+    <preference name="android-targetSdkVersion" value="36" />
     <preference name="WebViewAllowFileAccess" value="true" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="AndroidWebViewAcceptThirdPartyCookies" value="true" />

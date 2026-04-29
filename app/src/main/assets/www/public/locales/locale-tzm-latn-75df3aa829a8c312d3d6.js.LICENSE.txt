@@ -1,5 +1,0 @@
-//! author : Abdel Said : https://github.com/abdelsaid
-
-//! locale : Central Atlas Tamazight Latin [tzm-latn]
-
-//! moment.js locale configuration
