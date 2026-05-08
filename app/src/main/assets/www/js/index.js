@@ -61,7 +61,7 @@
 // sshfs		sshfs odysee@208.95.0.116:/home/odysee/apkhost/ /home/rave/Work/ODYSEE/REMOTE
 
 var mode = 'google' // Will be set dynamically in onDeviceReady
-const version = '122'
+const version = '123'
 const log = false
 var payload = undefined
 var lockControls = false

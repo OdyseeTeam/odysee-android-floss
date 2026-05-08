@@ -1,2 +1,0 @@
-function e(t){if(Array.isArray(t))return t.map(t=>e(t));if(t&&typeof t==`object`){let n={};return Object.keys(t).forEach(r=>{n[r]=e(t[r])}),n}return t}export{e as t};
-//# sourceMappingURL=clone-BxER4nCl.js.map

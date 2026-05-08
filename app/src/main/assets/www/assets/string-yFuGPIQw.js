@@ -1,0 +1,2 @@
+function e(e){return e.charAt(0).toUpperCase()+e.slice(1)}function t(e,t,n){let r=t||`en`;if(!n||Number(e)>=n)try{return Number(e).toLocaleString(r,{compactDisplay:`short`,notation:`compact`})}catch{return Number(e).toLocaleString(r)}else return Number(e).toLocaleString(r)}function n(e){return e&&e.charAt(0)===`@`?e.slice(1):e}function r(e){return String(e.split(``).reduce((e,t)=>(e<<5)-e+t.charCodeAt(0)|0,0))}export{t as i,n,e as r,r as t};
+//# sourceMappingURL=string-yFuGPIQw.js.map

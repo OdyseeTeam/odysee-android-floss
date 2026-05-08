@@ -1,0 +1,2 @@
+import{qa as e}from"./claims-BQPGHH21.js";var t={ar:null},n=t=>t.arwallet||e,r=e=>n(e),i=e=>!!n(e).address,a=e=>n(e).connecting,o=e=>n(e).address,s=e=>n(e).balance,c=e=>n(e).exchangeRates||t,l=e=>n(e).fetching,u=(e,t)=>n(e).tippingStatusById[t]===`started`,d=(e,t)=>n(e).tippingStatusById[t]&&n(e).tippingStatusById[t]!==`started`?n(e).tippingStatusById[t]:``,f=e=>n(e).auth;export{c as a,d as c,a as i,u as l,s as n,l as o,i as r,r as s,o as t,f as u};
+//# sourceMappingURL=arwallet-B-9fzY_g.js.map

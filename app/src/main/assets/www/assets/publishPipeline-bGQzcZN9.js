@@ -1,2 +1,0 @@
-import{go as e,ho as t,mo as n}from"./settings-DoxQkIWO.js";function r(e){return{type:n,data:e}}function i(t,n){return{type:e,data:{id:t,updates:n}}}function a(e){return{type:t,data:{id:e}}}export{a as n,i as r,r as t};
-//# sourceMappingURL=publishPipeline-bGQzcZN9.js.map

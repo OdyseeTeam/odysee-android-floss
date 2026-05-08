@@ -1,1 +1,0 @@
-{"version":3,"file":"notifications-Bzw-Byjz.js","names":[],"sources":["../../../../ui/util/notifications.ts"],"sourcesContent":["export const buildUnseenCountStr = (unseenCount: number) => (unseenCount > 99 ? '99+' : `${unseenCount}`);\n"],"mappings":"AAAA,IAAa,EAAuB,GAAyB,EAAc,GAAK,MAAQ,GAAG"}

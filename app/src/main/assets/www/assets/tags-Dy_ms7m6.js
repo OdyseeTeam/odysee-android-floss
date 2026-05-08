@@ -1,2 +1,0 @@
-import{n as e}from"./vendor-state~index~publish~index~nag-sunset~nag-no-user~nag-degraded-performance~rewards~in~eal4wyh0-BIYkQsNj.js";import{qa as t}from"./claims-DGXQiIbi.js";var n=e=>e.tags||t,r=e=>n(e).knownTags,i=e=>n(e).followedTags,a=e(i,e=>e.map(e=>({name:e.toLowerCase()})).sort((e,t)=>e.name.localeCompare(t.name))),o=e(r,i,(e,t)=>{let n=new Set(t),r=[];return Object.keys(e).forEach(t=>{if(!n.has(t)){let{name:n}=e[t];r.push({name:n.toLowerCase()})}}),r});export{o as n,a as t};
-//# sourceMappingURL=tags-Dy_ms7m6.js.map

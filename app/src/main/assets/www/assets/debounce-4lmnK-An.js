@@ -1,0 +1,2 @@
+function e(e,t,n){let r;return function(){let i=this,a=arguments,o=()=>{r=null,n||e.apply(i,a)},s=n&&!r;clearTimeout(r),r=setTimeout(o,t),s&&e.apply(i,a)}}export{e as t};
+//# sourceMappingURL=debounce-4lmnK-An.js.map
