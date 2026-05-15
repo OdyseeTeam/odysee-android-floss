@@ -1,2 +1,0 @@
-import{i as e,r as t}from"./vendor-state~index~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~~nh8rnwl1-C9ZZ-kfU.js";var n=()=>t(),r=e;export{r as n,n as t};
-//# sourceMappingURL=hooks-CSzhTNWZ.js.map

@@ -1,2 +1,0 @@
-import{p as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~i9frurse-CO--X6FL.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";import{l as n}from"./vendor-markdown~index~index~index~index~index~index~index~index~index~index~markdown-previe~f4lxz660-CwogRX3y.js";t(e());var r=n();function i(e){let{children:t}=e;if(!t)return null;let n=t[0].toUpperCase()+t.slice(1);return n=n.endsWith(`.`)?n:`${n}.`,(0,r.jsx)(`span`,{className:`error__text`,children:n})}export{i as t};
-//# sourceMappingURL=error-text-CBT4WcA9.js.map

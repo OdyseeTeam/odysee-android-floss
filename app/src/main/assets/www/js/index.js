@@ -52,16 +52,22 @@
 	}
 */
 
-// Run			cordova run android
+// Run			runapk || rungoogle || runfloss
+// Run			cordova run android // Will build based on www folder files. Avoid this. Use the custom run commands below instead.
+// Alias		alias runapk='rm -rf www/assets www/font www/cast www/app-strings.json www/index.html www/index-electron.html www/index-web-floss.html www/favicon*.png && cp -a www-default/. www/ && cordova plugins add cordova-plugin-apkupdater 2>/dev/null; cordova run android'
+// Alias 		alias rungoogle='rm -rf www/assets www/font www/cast www/app-strings.json www/index.html www/index-electron.html www/index-web-floss.html www/favicon*.png && cp -a www-default/. www/ && cordova run android'
+// Alias		alias runfloss='./floss-run.sh'
+
+// Build		buildgoogle || buildapk || buildfloss
 // Alias		alias buildgoogle='cordova plugins rm cordova-plugin-apkupdater; cordova build --release --buildConfig=build.json'
 // Alias		alias buildapk='cordova plugins add cordova-plugin-apkupdater; cordova build --release --buildConfig=build.json'
 // Alias		alias buildfloss='./floss-release.sh'
-// Build		buildgoogle || buildapk
+
 // ssh			ssh odysee@208.95.0.116
 // sshfs		sshfs odysee@208.95.0.116:/home/odysee/apkhost/ /home/rave/Work/ODYSEE/REMOTE
 
 var mode = 'google' // Will be set dynamically in onDeviceReady
-const version = '123'
+const version = '124'
 const log = false
 var payload = undefined
 var lockControls = false

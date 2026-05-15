@@ -1,0 +1,2 @@
+import{m as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~i9frurse-Df0H_QAJ.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";import{t as n}from"./asserts-CZDblDgE.js";var r=t(e());function i(e){n(typeof e==`function`),r.useEffect(()=>e(),[])}export{i as t};
+//# sourceMappingURL=use-component-did-mount-BeBi6JHz.js.map

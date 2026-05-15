@@ -1,2 +1,0 @@
-import{p as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~i9frurse-CO--X6FL.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";import{l as n}from"./vendor-markdown~index~index~index~index~index~index~index~index~index~index~markdown-previe~f4lxz660-CwogRX3y.js";import{t as r}from"./button-DIIos2pv.js";t(e());var i=n(),a=e=>{let{id:t}=e;return(0,i.jsx)(r,{button:`link`,href:`https://explorer.lbry.com/tx/${t}`,label:t.substr(0,7)})};export{a as t};
-//# sourceMappingURL=transaction-link-euwPoF2Q.js.map

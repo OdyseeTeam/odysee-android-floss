@@ -1,0 +1,2 @@
+import{m as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~i9frurse-Df0H_QAJ.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";import{l as n}from"./vendor-markdown~index~index~index~index~index~index~index~index~index~index~markdown-previe~f4lxz660-DOCH29wo.js";t(e());var r=n();function i({message:e=``}){return(0,r.jsxs)(`span`,{className:`busy-indicator`,children:[e,` `,(0,r.jsx)(`span`,{className:`busy-indicator__loader`})]})}export{i as t};
+//# sourceMappingURL=busy-indicator-DyYs07t-.js.map

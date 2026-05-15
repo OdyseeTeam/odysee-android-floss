@@ -1,2 +1,0 @@
-import{p as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~i9frurse-CO--X6FL.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";import{l as n}from"./vendor-markdown~index~index~index~index~index~index~index~index~index~index~markdown-previe~f4lxz660-CwogRX3y.js";var r=t(e()),i=n(),a=r.memo(({text:e,lines:t,showTooltip:n=!0,style:r})=>(0,i.jsx)(`span`,{title:n?e:``,className:`truncated-text`,style:{WebkitLineClamp:t,...r},children:e}));export{a as t};
-//# sourceMappingURL=truncated-text-CEKv-Fi7.js.map

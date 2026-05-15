@@ -1,2 +1,0 @@
-import{p as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~i9frurse-CO--X6FL.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";var n=t(e()).createContext(void 0);export{n as t};
-//# sourceMappingURL=channel-DofDNXxt.js.map

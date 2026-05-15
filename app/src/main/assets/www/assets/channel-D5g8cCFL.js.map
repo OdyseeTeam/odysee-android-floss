@@ -1,0 +1,1 @@
+{"version":3,"file":"channel-D5g8cCFL.js","names":[],"sources":["../../../../ui/contexts/channel.ts"],"sourcesContent":["import React from 'react';\nexport const ChannelPageContext = React.createContext<any>(undefined);\n"],"mappings":"0LACA,IAAa,SAA2B,cAAmB,IAAA,GAAU"}

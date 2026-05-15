@@ -1,1 +1,0 @@
-{"version":3,"file":"embed-mrOXp3Lj.js","names":[],"sources":["../../../../ui/contexts/embed.ts"],"sourcesContent":["import React from 'react';\nexport const EmbedContext = React.createContext<any>(undefined);\n"],"mappings":"0LACA,IAAa,SAAqB,cAAmB,IAAA,GAAU"}

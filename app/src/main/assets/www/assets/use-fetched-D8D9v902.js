@@ -1,0 +1,2 @@
+import{m as e}from"./vendor-react~index~nag-sunset~nag-no-user~nag-degraded-performance~index~index~index~index~~i9frurse-Df0H_QAJ.js";import{s as t}from"./rolldown-runtime-Czos8NxU.js";import{Nt as n}from"./index-BGuII45C.js";var r=t(e());function i(e){let t=n(e),[i,a]=r.useState(!1);return r.useEffect(()=>{t&&!e&&a(!0)},[t,e,a]),i}export{i as t};
+//# sourceMappingURL=use-fetched-D8D9v902.js.map
